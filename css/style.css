@@ -12,26 +12,38 @@ font: Playfair Display
 }
 
 :root {
-	--background: #FFE297;
-	--font: #472914;
-	--a: #472914;
-	--a-visited: #472914;
+	--background: #e6f4f1;
+	--font: #000;
+	--background-header: #afc7cd;
+	--a: #000;
+	--a-visited: #000;
 	--a-active: #4f7978;
-	--button-background: #3AB4FC;
-	--button-text: #FF0303;
-	--light-sun: #FFED16;
-	--dark-sun: #5AFF16;
-	--background-grid: #c68541;
-	--font-grid: #472914;
-
-
+	--button-background: #7a9197;
+	--button-text: #000;
+	--background-grid: #7a9197;
+	--font-grid: #000;
 } 
+
+header {
+	border: solid;
+	margin: 0px 0px 50px 0px;
+	font-size: 24px;
+}
 
 body {
 	background-color: var(--background);
 	font-family: 'Playfair Display', serif;
 	font-size: 18px;
 	line-height: 1.6;
+}
+
+main {
+	text-align: center;
+}
+
+p, a, page-footer {
+	margin: 10px;
+	padding: 10px;
 }
 
 h1, li, a {
@@ -58,7 +70,7 @@ li {
 }
 
 #logo {
-	height: 175px;
+	height: 200px;
 }
 
 .page-header {
@@ -97,7 +109,7 @@ li {
 	text-align: center;
 }
 
-/* Home and about pages */
+/* Home page */
 
 .profile {
 	max-width: 700px;
@@ -110,11 +122,6 @@ li {
   height: 250px;
   margin-right: 40px;
   border-radius: 50%;
-}
-
-.table {
-	margin: 32px auto;
-	width: fit-content;
 }
 
 /* About page */
@@ -137,68 +144,24 @@ button:hover, button:focus, .button:hover, .button:focus {
   opacity: 0.8;
 }
 
-@keyframes color-change {
-  from {
-    fill: var(--light-sun);
-  }
-  to {
-    fill: var(--dark-sun);
-  }
-}
-
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-
 /* Work page */
 
 .grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
 }
 
 .grid__item {
 	background-color: var(--background-grid);
 	color: var(--font-grid);
+	margin: 10px;
+	padding: 25px;
 }
 
-.grid__item:last-child {
-	grid-column-start: 3;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 3;
+.navigation-list__item {
+	margin: 15px;
+	padding: 15px;
 }
 
 /* Contact page */
@@ -208,6 +171,11 @@ button:hover, button:focus, .button:hover, .button:focus {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+}
+
+#my-contact {
+	margin: 30px;
+	padding: 30px 0px 15px 0px;
 }
 
 /* Responsive design */
