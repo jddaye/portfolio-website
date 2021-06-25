@@ -30,6 +30,10 @@ header {
 	font-size: 24px;
 }
 
+.page-footer {
+	margin: 50px 0px 0px 0px;
+}
+
 body {
 	background-color: var(--background);
 	font-family: 'Playfair Display', serif;
@@ -41,7 +45,7 @@ main {
 	text-align: center;
 }
 
-p, a, page-footer {
+p, a {
 	margin: 10px;
 	padding: 10px;
 }
@@ -142,6 +146,26 @@ li {
 button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.animate {
+   width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #7a9197;
+  position: relative;
+  animation-name: example;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  }  
+
+@keyframes example {
+  0%   {background-color: #7a9197; left: 0%;}
+  25%  {background-color: #324b51; left: 25%}
+  50%  {background-color: #7ab4c2; left: 50%}
+  75%  {background-color: #95899f; left: 75%}
+  100% {background-color: #62576b; left:100%}
 }
 
 /* Work page */
